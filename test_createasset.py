@@ -10,7 +10,7 @@ chrome_options = ChromeOptions()
 @pytest.mark.usefixtures("newset")
 class TestExample:
 
-    def test_page(self,mytest):
+    def test_page(self):
         self.driver.implicitly_wait(15)
         #time.sleep(5)
         self.driver.find_element(By.ID, "mobile").send_keys("9823521834")
@@ -21,7 +21,7 @@ class TestExample:
         self.driver.find_element(By.ID, "Log In button").click()
 
         time.sleep(5)
-        self.driver.refresh()
+        #self.driver.refresh()
 
 
 
